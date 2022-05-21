@@ -21,14 +21,14 @@ steps:
   - '--allow-unauthenticated'
   waitFor: ['push-image-to-container-registry']
   id: 'deploy-to-cloud-run'
-- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:slim'
-  volumes:
-  - name: 'vol1'
-    path: '/myawesomevolume'
-  entrypoint: '/bin/bash'
-  args: ['-c', 'echo $BUILD_ID']
-  waitFor: ['deploy-to-cloud-run']
-  id: 'echo-build-ID'
+# - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:slim'
+#   volumes:
+#   - name: 'vol1'
+#     path: '/myawesomevolume'
+#   entrypoint: '/bin/bash'
+#   args: ['-c', 'echo $BUILD_ID']
+#   waitFor: ['deploy-to-cloud-run']
+#   id: 'echo-build-ID'
 # - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:slim'
 #   volumes:
 #   - name: 'vol1'
